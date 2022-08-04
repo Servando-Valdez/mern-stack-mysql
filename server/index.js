@@ -1,10 +1,13 @@
 import express from "express";
 import {PORT} from './config.js';
-
+import cors from "cors";
 import indexRouter from './routes/index.routes.js';
 import tasksRoutes from './routes/tasks.routes.js';
 
 const app = express();
+
+app.use(cors())//esto hace que otro servidor se pueda comunicar con nuestro servidor,
+//así podemos conectar el frontend con el backend
 
 app.use(express.json());//this is to process json
 
