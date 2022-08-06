@@ -47,7 +47,7 @@ const UpdateTask = async (req, res) => {
         }
         return res.json(result)
     } catch (error) {
-        return res.status(500).json({ message: err.message});
+        return res.status(500).json({ message: error.message});
     }
 }
 
@@ -62,7 +62,7 @@ const DeleteTask = async (req, res) => {
         }
         return res.sendStatus(204);
     } catch (error) {
-        return res.status(500).json({ message: err.message });
+        return res.status(500).json({ message: error.message });
     }
 
 
